@@ -20,7 +20,7 @@ storms <- storms
 
 storms |>
   ggplot() +
-  geom_line(mapping = aes(x = year, y = mean_wind))"
+  geom_point(mapping = aes(x = year, y = mean_wind))"
 
 storms |>
   ggplot() +
