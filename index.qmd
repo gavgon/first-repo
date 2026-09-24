@@ -1,5 +1,6 @@
 ---
-title: "Untitled"
+title: "Storms Analysis"
+author: "Gavin Gondalwala"
 format: html
 editor: source
 embed-resources: true
@@ -13,13 +14,13 @@ library(tidyverse)
 
 storms <- storms
 
-mean_wind <- storms |>
+"mean_wind <- storms |>
   group_by(year) |>
-  summarize(mean_wind = mean(wind, na.rm == TRUE))
+  summarize(mean_wind = mean(wind, na.rm = TRUE))
 
 storms |>
   ggplot() +
-  geom_line(mapping = aes(x = year, y = wind))
+  geom_line(mapping = aes(x = year, y = mean_wind))"
 
 storms |>
   ggplot() +
