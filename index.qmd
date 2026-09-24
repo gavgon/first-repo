@@ -14,13 +14,13 @@ library(tidyverse)
 
 storms <- storms
 
-"mean_wind <- storms |>
+mean_wind <- storms |>
   group_by(year) |>
   summarize(mean_wind = mean(wind, na.rm = TRUE))
 
-storms |>
+mean_wind |>
   ggplot() +
-  geom_point(mapping = aes(x = year, y = mean_wind))"
+  geom_line(mapping = aes(x = year, y = mean_wind))
 
 storms |>
   ggplot() +
